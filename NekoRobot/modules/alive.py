@@ -23,6 +23,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
+import random
 import asyncio
 import datetime
 from datetime import datetime
@@ -36,12 +37,15 @@ from NekoRobot.events import register
 
 edit_time = 5
 """ =======================Neko====================== """
-file1 = "https://telegra.ph/file/da817befa131f7a5f533e.jpg"
-file2 = "https://telegra.ph/file/a048c4fa0bdb2738fff69.jpg"
-file3 = "https://telegra.ph/file/a62029574186f318c6529.jpg"
-file4 = "https://telegra.ph/file/1368985b1a20870949673.jpg"
-file5 = "https://telegra.ph/file/7dcde6edba760c620e91f.jpg"
+file1 = "https://te.legra.ph/file/01b8a0d260d9ca321ee08.jpg"
+file2 = "https://te.legra.ph/file/cc4577ce5e5fecccfd931.png"
 """ =======================Neko====================== """
+
+PHOTO = [
+    "https://te.legra.ph/file/01b8a0d260d9ca321ee08.jpg",
+    "https://te.legra.ph/file/cc4577ce5e5fecccfd931.png",
+]
+
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -71,13 +75,12 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    NekoX = f"**☘️I'm {BOT_NAME}\n👄I'm Working Perfectly **\n\n"
-    NekoX += f"**✨My Uptime :** `{uptime}`\n\n"
-    NekoX += f"**👺My Creator:** [TOAA](https://t.me/M_TOAA)"
+    NekoX = f"**Hey [{yes.sender.first_name}](tg://user?id={yes.sender.id}) Senpai\nI'm Daki\n **\nI'm truly glad you remember me senpai\n"
+    NekoX += f"**Alive Since :** `{uptime}`\n\n"
     BUTTON = [
         [
-            Button.url("♻️Help", f"https://t.me/{BOT_USERNAME}?start=help"),
-            Button.url("🌱Support", f"https://t.me/{SUPPORT_CHAT}"),
+            Button.url("💬Support Chat", f"https://t.me/{SUPPORT_CHAT}"),
         ]
     ]
-    await neko.send_file(yes.chat_id, file="https://graph.org/file/f292aa8dc6e1f9434aea0.mp4",caption=NekoX, buttons=BUTTON)
+    ran = random.choice(PHOTO)
+    await neko.send_file(yes.chat_id, ran, caption=NekoX, buttons=BUTTON)
