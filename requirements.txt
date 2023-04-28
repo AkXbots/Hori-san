@@ -3,6 +3,7 @@ envparse==0.2.0
 multicolorcaptcha
 faker
 odmantic
+loguru
 ffmpeg
 humanize
 wget==3.2
