@@ -38,7 +38,6 @@ from redis import StrictRedis
 from aiohttp import ClientSession
 from httpx import AsyncClient, Timeout
 from pymongo import MongoClient 
-from odmantic import AIOEngine
 from NekoRobot.confing import get_int_key, get_str_key
 from motor import motor_asyncio
 from pyrogram import Client
