@@ -121,7 +121,7 @@ if ENV:
     API_HASH = os.environ.get("API_HASH", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     DB_URI = os.environ.get("DATABASE_URL")
-    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+    DB_URI = DB_URI.replace("postgres://", "postgresql://", 1)
     SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
