@@ -2,6 +2,7 @@ future
 envparse==0.2.0
 multicolorcaptcha
 faker
+odmantic
 ffmpeg
 humanize
 wget==3.2
