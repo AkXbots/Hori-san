@@ -34,7 +34,7 @@ class Config(object):
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "postgres://gbjxuevv:2nl1aOrXO8cKC2xS742CAKE-5bKJJAfh@isilo.db.elephantsql.com/gbjxuevv"  # needed for any database modules
-    DB_URL = "postgres://gbjxuevv:2nl1aOrXO8cKC2xS742CAKE-5bKJJAfh@isilo.db.elephantsql.com/gbjxuevv"
+    DB_URI = "postgres://gbjxuevv:2nl1aOrXO8cKC2xS742CAKE-5bKJJAfh@isilo.db.elephantsql.com/gbjxuevv"
     REDIS_URL = "redis://default:6vsajwd6wq3lNI7T3zMIpltTrU040DJC@redis-19248.c16.us-east-1-3.ec2.cloud.redislabs.com:19248"
     LOAD = []
     BOT_USERNAME = "Scarlett_Witchh_Bot"
