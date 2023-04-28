@@ -113,11 +113,7 @@ HELP_MSG = "Click The Button Below To Get Help Menu In Your Dm."
 START_MSG = "I'm Awake Already!\n<b>Haven't Slept Since:</b> <code>{}</code>"
 
 NEKO_STICKERS = (
-    "CAACAgUAAxkBAAOYY2klosKj5pHcyhmNXsT9m70BoTEAAhgEAAIvQfFWW0GMDbBfQCkrBA",
-    "CAACAgUAAxkBAAObY2kl_6_3adx8GcE0Ni6KWjYee9cAAmcFAAK1o8lVHDHMzlazrpUrBA",
-    "CAACAgUAAxkBAAOeY2kmDQ5mx7ILPJWigUGatimo-7oAAkUFAAPI-VZjCLxUheTevCsE",
-    "CAACAgUAAxkBAAOjY2kmOMuELQUQipBy8ID-jd6JDIwAAhoFAAJl6fhWYbGzZaQ8H-srBA",
-    "
+    "CAACAgUAAxkBAAId0GRLmmZSmVC1nISOqdfKHPWiVYX5AALcCgAC_p1hViygKMvvz1XdLwQ",
 )
 
 PM_START_TEXT = """
@@ -128,9 +124,6 @@ They Call Me Mommy For a Reason.
 I Am A Group Management Bot, Built For Nerds.
 I Am Specialized In Managing Groups For Communities💫*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ *Uptime:* `{}`
-❍ `7109` *Users, Across* `267` *Chats.*
-➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Help Button Below To Know My Abilities ××
 """
 
@@ -138,7 +131,7 @@ buttons = [
     [
         InlineKeyboardButton(
             text=f"Add {BOT_NAME} To Your Group",
-            url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true",
+            url=f"https://telegram.dog/Mikasaxprobot?startgroup=true",
         )
     ],
     [
@@ -146,7 +139,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+            text="🚑 Support", url=f"https://telegram.dog/botsupportx"
         ),
     ],
 ]
@@ -162,7 +155,7 @@ HELP_STRINGS = """
 """
 
 GROUP_START_IMG = (
-    "https://graph.org/file/b1faed61b726848ae6cf2.jpg",
+    "https://te.legra.ph/file/8e64b8539046b4b73871d.jpg",
 )
     
 DONATE_STRING = """❂ I'm Free for Everyone ❂"""
@@ -298,11 +291,11 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="🚑 Support",
-                            url=f"https://telegram.dog/{SUPPORT_CHAT}",
+                            url=f"https://telegram.dog/botsupportx",
                         ),
                         InlineKeyboardButton(
-                            text="WOF 🕊️",
-                            url="https://telegram.dog/WingsOfFreedom2",
+                            text="Owner",
+                            url="https://telegram.dog/tobiix",
                         ),
                     ]
                 ]
@@ -378,7 +371,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
                                 text="[🔙 Back ]", callback_data="help_back"
                             ),
                             InlineKeyboardButton(
-                                text="[🚑 Support ]", url=f"https://t.me/{SUPPORT_CHAT}"
+                                text="[🚑 Support ]", url=f"https://t.me/botsupportx"
                             ),
                         ]
                     ]
@@ -664,12 +657,12 @@ def donate(update: Update, context: CallbackContext) -> None:
                     [
                         [
                             InlineKeyboardButton(
-                                text="WOF🕊️",
-                                url="https://telegram.dog/WingsOfFreedom2",
+                                text="Owner",
+                                url="https://telegram.dog/tobiix",
                             ),
                             InlineKeyboardButton(
                                 text="🚑 Support",
-                                url=f"https://telegram.dog/{SUPPORT_CHAT}",
+                                url=f"https://telegram.dog/botsupportx",
                             ),
                         ]
                     ]
