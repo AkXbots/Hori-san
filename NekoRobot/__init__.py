@@ -32,14 +32,10 @@ import time
 import aiohttp
 import httpx
 import spamwatch
-import pymongo
 import telegram.ext as tg
 from redis import StrictRedis
 from aiohttp import ClientSession
 from httpx import AsyncClient, Timeout
-from pymongo import MongoClient 
-from NekoRobot.confing import get_int_key, get_str_key
-from motor import motor_asyncio
 from pyrogram import Client
 from pyrogram.enums import ParseMode
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, PeerIdInvalid
@@ -109,7 +105,6 @@ if ENV:
     ARQ_API_URL = os.environ.get("ARQ_API_URL", None)
     ARQ_API_KEY = os.environ.get("ARQ_API_KEY", None)
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "")  # Bot Username
-    BOT_NAME = os.environ.get("BOT_NAME", "")  # Bot Name
     ERROR_LOGS = os.environ.get(
         "ERROR_LOGS", None
     )  # Error Logs (Channel Or Group Choice Is Yours)
@@ -119,8 +114,7 @@ if ENV:
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    DB_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
-    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+    DB_URI = os.environ.get("DATABASE_URL")
     SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
@@ -145,20 +139,16 @@ if ENV:
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
+    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
     TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "lightYagami")
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     BOT_NAME = os.environ.get("BOT_NAME", True)  # Name Of your Bot.4
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "")  # Bot Username
-    HELP_IMG = os.environ.get("HELP_IMG", True)
-    REDIS_URL = os.environ.get("REDIS_URL", None) # REDIS URL (From:- Heraku & Redis)
-    OPENWEATHERMAP_ID = os.environ.get(
-        "OPENWEATHERMAP_ID", ""
-    )  # From:- https://openweathermap.org/api
     LOG_GROUP_ID = os.environ.get("LOG_GROUP_ID", None)
-    BOT_ID = 5722771565
+    BOT_ID = 1412878118
+    HELP_IMG = os.environ.get("HELP_IMG", "")
     STRICT_GMUTE = bool(os.environ.get("STRICT_GMUTE", True))
-    MONGO_DB = "Shikimori"
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     REM_BG_API_KEY = os.environ.get(
         "REM_BG_API_KEY", None
@@ -209,17 +199,13 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-    STRING_SESSION = Config.STRING_SESSION
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     REDIS_URL = Config.REDIS_URL
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
-    HELP_IMG = Config.HELP_IMG
     NO_LOAD = Config.NO_LOAD
-    ERROR_LOGS = Config.ERROR_LOGS
     DEL_CMDS = Config.DEL_CMDS
-    MONGO_DB = Config.MONGO_DB
-    MONGO_DB_URI = Config.MONGO_DB_URI
+    HELP_IMG = Config.HELP_IMG
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
@@ -232,13 +218,19 @@ else:
     SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
     SPAMWATCH_API = Config.SPAMWATCH_API
     INFOPIC = Config.INFOPIC
-    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
+    ARQ_API_URL = Config.ARQ_API_URL
+    ARQ_API_KEY = Config.ARQ_API_KEY
+    MONGO_DB_URI = Config.MONGO_DB_URI
+    STRING_SESSION = Config.STRING_SESSION
+    ERROR_LOGS = Config.ERROR_LOGS
     BOT_NAME = Config.BOT_NAME
-    ARQ_API_URL = "arq.hamker.dev"
-    ARQ_API_KEY = "UMPYGF-MVNLVW-RTNXKA-FJWOUH-ARQ"
 
-    BOT_USERNAME = "Scarlet_Witchh_Bot"
-    OPENWEATHERMAP_ID = "ca1f9caacbb92187db96c0bf5686017b"
+    from motor.motor_asyncio import AsyncIOMotorClient
+
+    mongo = AsyncIOMotorClient(MONGO_DB_URI)
+    db = mongo.sukuna
+    
+    BOT_USERNAME = Config.BOT_USERNAME
 
     REM_BG_API_KEY = Config.REM_BG_API_KEY
 
@@ -248,9 +240,9 @@ else:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 
-DEV_USERS.add(5348193047)
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+DEV_USERS.add(5978107653)
 REDIS_URL = "redis://default:6vsajwd6wq3lNI7T3zMIpltTrU040DJC@redis-19248.c16.us-east-1-3.ec2.cloud.redislabs.com:19248"
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
 
 try:
     REDIS.ping()
@@ -289,11 +281,6 @@ print(
     "[NEKOROBOT] Project Maintained By: github.com/Awesome-Prince (https://github.com/Awesome-Prince/NekoRobot-3)"
 )
 
-mongodb = MongoClient(MONGO_DB_URI, 27017)[MONGO_DB]
-motor = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URI)
-db = motor[MONGO_DB]
-engine = AIOEngine(motor, MONGO_DB)
-
 print("[NEKOROBOT]: Telegraph Installing")
 telegraph = Telegraph()
 print("[NEKOROBOT]: Telegraph Account Creating")
@@ -311,6 +298,7 @@ NEKO_PTB = updater.dispatcher
 # ------------------------------------------------------------------
 print("[NEKOROBOT]: PYROGRAM CLIENT STARTING")
 PyroGram = TOKEN.split(":")[0]
+
 pgram = Client(
     name=PyroGram,
     api_id=API_ID,
@@ -321,6 +309,7 @@ pgram = Client(
     sleep_threshold=60,
     in_memory=True,
 )
+
 print("[INFO]: INITIALZING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
 # ARQ Client
@@ -329,7 +318,7 @@ arq = ARQ("https://thearq.tech", "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ", aiohttpsessi
 print(
     "[NEKOROBOT]: Connecting To Programmer • Data Center • Chennai • PostgreSQL Database"
 )
-ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
+# ubot = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 print(
     "[NEKOROBOT]: Connecting To Programmer • Neko Userbot (https://telegram.dog/Awesome_Neko)"
 )
@@ -364,8 +353,12 @@ async def get_entity(client, entity):
     return entity, entity_client
 
 
-apps = [pgram]
+from motor.motor_asyncio import AsyncIOMotorClient
 
+mongo = AsyncIOMotorClient("mongodb+srv://toaa:toaa69@cluster0.eduoooo.mongodb.net/?retryWrites=true&w=majority")
+db = mongo.STEVE
+
+apps = [pgram]
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
