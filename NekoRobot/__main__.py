@@ -117,13 +117,13 @@ NEKO_STICKERS = (
     "CAACAgUAAxkBAAObY2kl_6_3adx8GcE0Ni6KWjYee9cAAmcFAAK1o8lVHDHMzlazrpUrBA",
     "CAACAgUAAxkBAAOeY2kmDQ5mx7ILPJWigUGatimo-7oAAkUFAAPI-VZjCLxUheTevCsE",
     "CAACAgUAAxkBAAOjY2kmOMuELQUQipBy8ID-jd6JDIwAAhoFAAJl6fhWYbGzZaQ8H-srBA",
-    "CAACAgUAAxkBAAOmY2kmUvb_Dax0XjWGP1tleGy6ZUcAApYGAAJnHfFWsE7CjKS1xFwrBA",
+    "
 )
 
 PM_START_TEXT = """
-────「 [{}](https://graph.org/file/c27ad2f09b57d13975df8.jpg) 」────
+────「 [{}](https://te.legra.ph/file/d1e0ea909331203b83169.jpg) 」────
 
-*Hey {}✨!,My Name Is Scarlet Witch🪄
+*Hey {}✨!,My Name Is Hinata🪄
 They Call Me Mommy For a Reason.
 I Am A Group Management Bot, Built For Nerds.
 I Am Specialized In Managing Groups For Communities💫*
