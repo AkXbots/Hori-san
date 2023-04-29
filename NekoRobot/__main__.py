@@ -121,7 +121,6 @@ PM_START_TEXT = """
 
 *Hey {}✨!,My Name Is Hinata🪄
 They Call Me Mommy For a Reason.
-I Am A Group Management Bot, Built For Nerds.
 I Am Specialized In Managing Groups For Communities💫*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Help Button Below To Know My Abilities ××
