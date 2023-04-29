@@ -45,7 +45,7 @@ from NekoRobot.modules.sql.afk_sql import check_afk_status, is_afk
 from NekoRobot.modules.sql.global_bans_sql import is_user_gbanned
 from NekoRobot.modules.sql.users_sql import get_user_num_chats
 
-NEKO_IMG = "https://graph.org/file/a84cd2083cc6d0f3345a1.jpg"
+NEKO_IMG = "1https://telegra.ph/file/d912e72760f68d4985c86.jpg"
 
 
 def no_by_per(totalhp, percentage):
@@ -242,10 +242,10 @@ def info(update: Update, context: CallbackContext):
     buttons = [
         [
             InlineKeyboardButton(
-                text="Health", url="https://t.me/WOFBotsUpdates/2"
+                text="Health", url="https://t.me/updatep1/3"
             ),
             InlineKeyboardButton(
-                text="Disasters", url="https://t.me/WOFBotsUpdates/3"
+                text="Disasters", url="https://t.me/updatep1/4"
             ),
         ],
     ]
@@ -467,8 +467,8 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/WOFBotsUpdates)\n\n"
-            + "\n╘══「 by [•Network](https://t.me/SurveyCorpsXteam) 」\n",
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/botsupportx)\n\n"
+            + "\n╘══「 by [•Network](https://t.me/AKATSUKIxNETWORKS) 」\n",
             parse_mode=ParseMode.MARKDOWN,
         )
     except BaseException:
@@ -478,7 +478,7 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/WOFBotsUpdates)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/botsupportx)\n\n"
                 ),
             parse_mode=ParseMode.MARKDOWN,
         )
