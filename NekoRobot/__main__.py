@@ -35,7 +35,6 @@ import importlib
 import json
 import random
 import re
-import YourRobot
 import time
 import traceback
 from sys import argv
