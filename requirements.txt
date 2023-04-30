@@ -5,7 +5,6 @@ faker
 odmantic
 loguru
 ffmpeg
-YourRobot==1.0
 humanize
 wget==3.2
 secureme==0.0.4
