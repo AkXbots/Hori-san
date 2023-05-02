@@ -54,7 +54,7 @@ def reverse(update: Update, context: CallbackContext) -> None:
     msg = update.effective_message
     chat_id = update.effective_chat.id
     rtmid = msg.message_id
-    imagename = "googlereverse.png"
+    imagename = "okgoogle.png"
 
     if os.path.isfile(imagename):
         os.remove(imagename)
