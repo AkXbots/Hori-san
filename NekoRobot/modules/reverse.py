@@ -85,7 +85,7 @@ def reverse(update: Update, context: CallbackContext) -> None:
         reply_to_message_id=rtmid,
     )
     try:
-        searchUrl = "https://www.google.com/searchbyimage/upload"
+        searchUrl = "https://www.google.com/search"
         multipart = {
             "encoded_image": (imagename, open(imagename, "rb")),
             "image_content": "",
