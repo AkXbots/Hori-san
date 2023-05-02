@@ -85,7 +85,7 @@ def reverse(update: Update, context: CallbackContext) -> None:
         reply_to_message_id=rtmid,
     )
     try:
-        searchUrl = "https://sasta.tk/google_reverse"
+        searchUrl = "https://www.google.com/searchbyimage/upload"
         multipart = {
             "encoded_image": (imagename, open(imagename, "rb")),
             "image_content": "",
