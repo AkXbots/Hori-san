@@ -133,7 +133,7 @@ def chatbot_msg(update: Update, context: CallbackContext):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        chatbot = requests.get('https://itsprodev.cf/chatbot/SOMETHING.php?api=' + api + '&message=' + Message)
+        chatbot = requests.get('https://kora-api.vercel.app/chatbot/2d94e37d-937f-4d28-9196-bd5552cac68b/hinatabot/Anonymous/message={message.text' + api + '&message=' + Message)
         Chat = json.loads(chatbot.text)
         Chat = Chat['reply']
         sleep(0.3)
