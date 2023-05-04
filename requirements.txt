@@ -6,6 +6,7 @@ odmantic
 loguru
 pbot
 ffmpeg
+forcesubscribe_sql
 humanize
 wget==3.2
 secureme==0.0.4
