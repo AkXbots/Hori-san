@@ -30,7 +30,6 @@ import sys
 import time
 import pbot
 import aiohttp
-import forcesubscribe_sql
 import httpx
 import spamwatch
 import telegram.ext as tg
