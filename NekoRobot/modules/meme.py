@@ -403,6 +403,9 @@ __handlers__ = [
     TABLE_HANDLER,
     SANITIZE_HANDLER,
     SHOUT_HANDLER,
-    WEEBIFY_HANDLER,
     EIGHTBALL_HANDLER,
 ]
+
+
+
+    
