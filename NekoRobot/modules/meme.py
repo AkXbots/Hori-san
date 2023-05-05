@@ -387,16 +387,16 @@ def weebify(update: Update, context: CallbackContext):
 
 
 @typing_action
-def goodnight(update, context):
+def (update, context):
     message = update.effective_message
-    reply = random.choice(fun.GDNIGHT)
+    reply = random.choice(fun.)
     message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
 
 @typing_action
-def goodmorning(update, context):
+def (update, context):
     message = update.effective_message
-    reply = random.choice(fun.GDMORNING)
+    reply = random.choice(fun.)
     message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
 
