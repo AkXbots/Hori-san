@@ -431,18 +431,18 @@ EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball, run_async=True
 TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=True)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout, run_async=True)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, run_async=True)
-GDMORNING_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(gm|good morning)"),
-    goodmorning,
-    friendly="goodmorning",
-    run_async=True,
-)
-GDNIGHT_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(gn|good night)"),
-    goodnight,
-    friendly="goodnight",
-    run_async=True,
-)
+
+
+
+
+
+
+
+
+
+
+
+
 
 NEKO_PTB.add_handler(WEEBIFY_HANDLER)
 NEKO_PTB.add_handler(SHOUT_HANDLER)
@@ -458,8 +458,8 @@ NEKO_PTB.add_handler(RLG_HANDLER)
 NEKO_PTB.add_handler(DECIDE_HANDLER)
 NEKO_PTB.add_handler(EIGHTBALL_HANDLER)
 NEKO_PTB.add_handler(TABLE_HANDLER)
-NEKO_PTB.add_handler(GDMORNING_HANDLER)
-NEKO_PTB.add_handler(GDNIGHT_HANDLER)
+
+
 
 __mod_name__ = "Fun"
 __command_list__ = [
@@ -493,6 +493,8 @@ __handlers__ = [
     SHOUT_HANDLER,
     WEEBIFY_HANDLER,
     EIGHTBALL_HANDLER,
-    GDMORNING_HANDLER,
-    GDNIGHT_HANDLER,
 ]
+
+
+
+
