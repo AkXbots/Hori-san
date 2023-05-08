@@ -31,7 +31,7 @@ class STRINGS:
 
 COMMANDS = ['reverse', 'grs', 'pp']
 
-@pbot.on_message(filters.command(COMMANDS))
+@pgram.on_message(filters.command(COMMANDS))
 async def on_reverse(client: Client, message: Message) -> Message:
     if not message.reply_to_message and not message.reply_to_message.media:
         await message.reply(STRINGS.REPLY_TO_MEDIA)
