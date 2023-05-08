@@ -66,7 +66,7 @@ async def reverse(app: client, msg: Message):
     response = requests.post(API_URL, json=data)
 
     if response.status_code == 200:
-        result = response["data"]
+        result = response.json()
         return await text.edit(
             f'Sauce: ```{result["output"]}```',
             parse_mode=ParseMode.MARKDOWN,
