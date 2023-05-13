@@ -30,14 +30,14 @@ def reverse(update: Update, context: CallbackContext):
                 f"[{result['data']['resultText']}]({result['data']['similarUrl']})",
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("á´€É´Éªá´á´‡ ðŸ¾", url="https://t.me/Animez_96")]]
+                    [[InlineKeyboardButton("Fixed by", url="https://t.me/king_of_ghoul")]]
                 ),
             )
         else:
-            update.effective_message.reply_text("sá´á´á´‡ á´‡xá´„á´‡á´˜á´›Éªá´É´ á´á´„á´„á´œÊ€á´‡á´…")
+            update.effective_message.reply_text("Fucking…")
 
     elif update.effective_message.reply_to_message.sticker:
-        msg = update.effective_message.reply_text("sá´‡á´€Ê€á´„ÊœÉªÉ´É¢ Ò“á´Ê€ sá´›Éªá´„á´‹á´‡Ê€.....")
+        msg = update.effective_message.reply_text("segsing.....")
 
         sticker_id = update.effective_message.reply_to_message.sticker.file_id
         get_path = requests.post(
@@ -55,14 +55,14 @@ def reverse(update: Update, context: CallbackContext):
                 f"[{result['data']['resultText']}]({result['data']['similarUrl']})",
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("á´€É´Éªá´á´‡ ðŸ¾", url="https://t.me/Animez_96")]]
+                    [[InlineKeyboardButton("Fixed by", url="https://t.me/king_of_ghoul")]]
                 ),
             )
         else:
-            update.effective_message.reply_text("sá´á´á´‡ á´‡xá´„á´‡á´˜á´›Éªá´É´ á´á´„á´„á´œÊ€á´‡á´…")
+            update.effective_message.reply_text("Fucking…")
 
     else:
-        update.effective_message.reply_text("Ê€á´‡á´˜ÊŸÊ á´›á´ á´€ á´˜Êœá´á´›á´ á´Ê€ á´€ sá´›Éªá´„á´‹á´‡Ê€.")
+        update.effective_message.reply_text("segsing.")
 
 
 reverse_handler = CommandHandler(
