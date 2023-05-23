@@ -4,7 +4,6 @@ multicolorcaptcha
 faker
 odmantic
 loguru
-openai
 pbot
 ffmpeg
 humanize
