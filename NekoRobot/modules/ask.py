@@ -28,7 +28,7 @@ from telegram.ext import Application, ContextTypes, Defaults
 
 # vars
 TOKEN = "6053431823:AAHHFknaSW5IoYvuIAhBUTwRGupVo8RMGSQ"
-OPEN_AI_API_KEY = "open ai api key here"
+OPEN_AI_API_KEY = "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"
 openai.api_key = OPEN_AI_API_KEY
 
 # ptb client
