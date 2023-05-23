@@ -2,6 +2,8 @@ future
 envparse==0.2.0
 multicolorcaptcha
 faker
+python-telegram-bot==20.0a4
+openai
 odmantic
 loguru
 pbot
