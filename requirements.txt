@@ -3,7 +3,6 @@ envparse==0.2.0
 multicolorcaptcha
 faker
 odmantic
-python-telegram-bot==20.0a4 openai
 loguru
 pbot
 ffmpeg
