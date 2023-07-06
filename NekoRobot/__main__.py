@@ -2,8 +2,8 @@
 BSD 2-Clause License
 
 Copyright (C) 2017-2019, Paul Larsen
-Copyright (C) 2022-2023, Awesome-Prince, [ https://github.com/Awesome-Prince ]
-Copyright (c) 2022-2023, Programmer • Network, [ https://github.com/Awesome-Prince/NekoRobot-3 ]
+Copyright (C) 2022-2023, Awesome-Prince, [  ]
+Copyright (c) 2022-2023, Programmer • Network, [  ]
 
 All rights reserved.
 
@@ -113,15 +113,17 @@ HELP_MSG = "Click The Button Below To Get Help Menu In Your Dm."
 START_MSG = "I'm Awake Already!\n<b>Haven't Slept Since:</b> <code>{}</code>"
 
 NEKO_STICKERS = (
-    "CAACAgUAAxkBAAId0GRLmmZSmVC1nISOqdfKHPWiVYX5AALcCgAC_p1hViygKMvvz1XdLwQ",
+    "CAACAgUAAxkBAAOYY2klosKj5pHcyhmNXsT9m70BoTEAAhgEAAIvQfFWW0GMDbBfQCkrBA",
 )
 
 PM_START_TEXT = """
-────「 [{}](https://te.legra.ph/file/d1e0ea909331203b83169.jpg) 」────
+────「 [{}](https://graph.org/file/354a3c1adb16121b89848.jpg) 」────
 
-*Hey {}✨!,My Name Is Hinata🪄
+*Hey {}✨!,My Name Is Hori🪄
 They Call Me Mommy For a Reason.
 I Am Specialized In Managing Groups For Communities💫*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+❍ *Uptime:* `{}`
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The Help Button Below To Know My Abilities ××
 """
@@ -138,7 +140,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🚑 Support", url=f"https://telegram.dog/botsupportx"
+            text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
         ),
     ],
 ]
@@ -154,7 +156,7 @@ HELP_STRINGS = """
 """
 
 GROUP_START_IMG = (
-    "https://te.legra.ph/file/8e64b8539046b4b73871d.jpg",
+    "https://graph.org/file/354a3c1adb16121b89848.jpg",
 )
     
 DONATE_STRING = """❂ I'm Free for Everyone ❂"""
@@ -290,11 +292,11 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="🚑 Support",
-                            url=f"https://telegram.dog/botsupportx",
+                            url=f"https://telegram.dog/{SUPPORT_CHAT}",
                         ),
                         InlineKeyboardButton(
                             text="Owner",
-                            url="https://telegram.dog/tobiix",
+                            url="https://telegram.dog/",
                         ),
                     ]
                 ]
@@ -370,7 +372,7 @@ def help_button(update: Update, context: CallbackContext) -> None:
                                 text="[🔙 Back ]", callback_data="help_back"
                             ),
                             InlineKeyboardButton(
-                                text="[🚑 Support ]", url=f"https://t.me/botsupportx"
+                                text="[🚑 Support ]", url=f"https://t.me/{SUPPORT_CHAT}"
                             ),
                         ]
                     ]
