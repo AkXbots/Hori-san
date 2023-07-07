@@ -14,34 +14,34 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID =   # integer value, dont use ""
-    API_HASH = ""
-    TOKEN = ""  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    API_ID = 18202635  # integer value, dont use ""
+    API_HASH = "237d1160ac8cd4767cf5b217dda3a5f6"
+    TOKEN = "5876543460:AAFSVCSxNFdAodCkNLzbKrg4jmGt3qXY-Ac"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     STRING_SESSION = ""
-    REDIS_URL = ""
-    MONGO_DB = "karma"
+    REDIS_URL = "redis://default:0nLBaxJed1LJaNgn9xhL1oyTL49u4B1T@redis-14243.c85.us-east-1-2.ec2.cloud.redislabs.com:14243/matrixx-free-db"
+    MONGO_DB = "mongodb+srv://sano07:sano07@cluster0.jxywgnn.mongodb.net/?retryWrites=true&w=majority"
     HELP_IMG = ""
     TEMP_DOWNLOAD_DIRECTORY = "./"
-    MONGO_DB_URI = ""
-    OWNER_ID =   # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = ""
-    SUPPORT_CHAT = ""  # Your own group for support, do not add the @
+    MONGO_DB_URI = "mongodb+srv://sano07:sano07@cluster0.jxywgnn.mongodb.net/?retryWrites=true&w=majority"
+    OWNER_ID = 6212000923  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "Mr_Xiiiiiiii"
+    SUPPORT_CHAT = "Xd_Bots_Support"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -100
+        -1001655270746
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -100
+        -1001655270746
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = ""  # needed for any database modules
     DB_URL = ""
     LOAD = []
-    BOT_USERNAME = ""
+    BOT_USERNAME = "Hori_xprobot"
     ARQ_API_URL = ""
     ARQ_API_KEY = ""
     ERROR_LOGS = -100
-    BOT_NAME = "ɪ"
+    BOT_NAME = "𝐇ᴏʀɪ 𝐊ʏᴏᴋᴏ"
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
     INFOPIC = True
