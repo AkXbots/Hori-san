@@ -20,7 +20,7 @@ class Config(object):
     STRING_SESSION = ""
     REDIS_URL = "redis://default:0nLBaxJed1LJaNgn9xhL1oyTL49u4B1T@redis-14243.c85.us-east-1-2.ec2.cloud.redislabs.com:14243/matrixx-free-db"
     MONGO_DB = "mongodb+srv://sano07:sano07@cluster0.jxywgnn.mongodb.net/?retryWrites=true&w=majority"
-    HELP_IMG = ""
+    HELP_IMG = "https://telegra.ph/file/e5679da600fe225b958db.jpg"
     TEMP_DOWNLOAD_DIRECTORY = "./"
     MONGO_DB_URI = "mongodb+srv://sano07:sano07@cluster0.jxywgnn.mongodb.net/?retryWrites=true&w=majority"
     OWNER_ID = 6212000923  # If you dont know, run the bot and do /id in your private chat with it, also an integer
