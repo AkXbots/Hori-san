@@ -41,7 +41,7 @@ file1 = "https://graph.org/file/8af7c21f6b5c5dfb55241.jpg"
 file2 = "https://graph.org/file/2808aba74d5f1667f71ee.jpg"
 """ =======================Neko====================== """
 
-PHOTO = []
+PHOTO = [
     "https://graph.org/file/8af7c21f6b5c5dfb55241.jpg",
     "https://graph.org/file/2808aba74d5f1667f71ee.jpg",
 
