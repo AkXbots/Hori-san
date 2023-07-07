@@ -34,13 +34,13 @@ class Config(object):
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = ""  # needed for any database modules
-    DB_URL = ""
+    SQLALCHEMY_DATABASE_URI = "postgres://ctoixwyr:CThCpbMv1lkdUuN90qeGdZ4VxdjpgTty@snuffleupagus.db.elephantsql.com/ctoixwyr"  # needed for any database modules
+    DB_URL = "postgres://ctoixwyr:CThCpbMv1lkdUuN90qeGdZ4VxdjpgTty@snuffleupagus.db.elephantsql.com/ctoixwyr"
     LOAD = []
     BOT_USERNAME = "Hori_xprobot"
-    ARQ_API_URL = ""
-    ARQ_API_KEY = ""
-    ERROR_LOGS = -100
+    ARQ_API_URL = "arq.hamker.dev"
+    ARQ_API_KEY = "SLSFXSsdUXNSMH-ARQ"
+    ERROR_LOGS = -1001655270746
     BOT_NAME = "𝐇ᴏʀɪ 𝐊ʏᴏᴋᴏ"
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
