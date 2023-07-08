@@ -44,7 +44,7 @@ file2 = "https://graph.org/file/2808aba74d5f1667f71ee.jpg"
 PHOTO = [
     "https://graph.org/file/8af7c21f6b5c5dfb55241.jpg",
     "https://graph.org/file/2808aba74d5f1667f71ee.jpg",
-
+]
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
