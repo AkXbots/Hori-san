@@ -119,28 +119,29 @@ NEKO_STICKERS = (
 PM_START_TEXT = """
 ────「 [{}](https://graph.org/file/354a3c1adb16121b89848.jpg) 」────
 
-*Hey {}✨!,My Name Is Hori🪄
-They Call Me Mommy For a Reason.
-I Am Specialized In Managing Groups For Communities💫*
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ *Uptime:* `{}`
-➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The Help Button Below To Know My Abilities ××
+ʜᴏɪɪ !! {first},
+
+‣ ᴛʜɪs ɪs {BOT_NAME} !
+
+➣ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+
+────────────────────
+➙ *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ʟᴇᴀʀɴ ᴍᴏʀᴇ!*
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text=f"Add {BOT_NAME} To Your Group",
+            text=f"∞ ᴀᴅᴅ ᴍᴇ ᴀɴʏ ɢʀᴏᴜᴘ ∞ ",
             url=f"https://telegram.dog/Hinata_proxbot?startgroup=true",
         )
     ],
     [
-        InlineKeyboardButton(text="📓 Help", callback_data="help_back"),
+        InlineKeyboardButton(text="• ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅ •", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="🚑 Support", url=f"https://telegram.dog/{SUPPORT_CHAT}"
+            text="• sᴜᴘᴘᴏʀᴛ •", url=f"https://telegram.dog/{SUPPORT_CHAT}"
         ),
     ],
 ]
@@ -149,10 +150,9 @@ HELP_STRINGS = """
 *Main* commands available:
 ➛ /help: PM's you this message.
 ➛ /help <module name>: PM's you info about that module.
-➛ /donate: information on how to donate!
 ➛ /settings:
-   ➛ in PM: will send you your settings for all supported modules.
-   ➛ in a group: will redirect you to pm, with all that chat's settings.
+➛ in PM: will send you your settings for all supported modules.
+➛ in a group: will redirect you to pm, with all that chat's settings.
 """
 
 GROUP_START_IMG = (
@@ -291,7 +291,7 @@ def start(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🚑 Support",
+                            text="• sᴜᴘᴘᴏʀᴛ •",
                             url=f"https://telegram.dog/{SUPPORT_CHAT}",
                         ),
                         InlineKeyboardButton(
