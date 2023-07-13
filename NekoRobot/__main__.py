@@ -117,7 +117,7 @@ NEKO_STICKERS = (
 )
 
 PM_START_TEXT = """
-ʜᴏɪɪ !! ɪ'ᴍ,(https://graph.org/file/354a3c1adb16121b89848.jpg) 
+ʜᴏɪɪ !! ɪ'ᴍ,[{}](https://graph.org/file/354a3c1adb16121b89848.jpg)
 
 
 ‣ ᴛʜɪs ɪs {BOT_NAME} !
