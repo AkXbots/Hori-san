@@ -16,7 +16,7 @@ class Config(object):
 
     API_ID = 18202635  # integer value, dont use ""
     API_HASH = "237d1160ac8cd4767cf5b217dda3a5f6"
-    TOKEN = "5876543460:AAHAKJy5y3Xvz6wEcajgw7P2KzK2WqKyzso"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    TOKEN = ""  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     STRING_SESSION = ""
     REDIS_URL = "redis://default:0nLBaxJed1LJaNgn9xhL1oyTL49u4B1T@redis-14243.c85.us-east-1-2.ec2.cloud.redislabs.com:14243/matrixx-free-db"
     MONGO_DB = "mongodb+srv://sano07:sano07@cluster0.jxywgnn.mongodb.net/?retryWrites=true&w=majority"
