@@ -239,7 +239,7 @@ else:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 
-DEV_USERS.add(5348193047)
+DEV_USERS.add()
 REDIS_URL = "redis://default:6vsajwd6wq3lNI7T3zMIpltTrU040DJC@redis-19248.c16.us-east-1-3.ec2.cloud.redislabs.com:19248"
 REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
 
